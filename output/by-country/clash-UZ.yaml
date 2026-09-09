@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇬 KG 01 - xiaohe
+- name: 🇺🇿 UZ 01 - xiaohe
   type: vless
-  server: 104.24.31.89
-  port: 443
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  server: 189.74.97.47
+  port: 2087
+  uuid: 894fe9f0-b998-49c0-8003-a5007de921e1
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /755276b33b6f
     headers:
-      Host: rayan-007.nastaran.dpdns.org
+      Host: 189.74.97.47
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇬 KG 01 - xiaohe
+  - 🇺🇿 UZ 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇬 KG 01 - xiaohe
+  - 🇺🇿 UZ 01 - xiaohe
 rules:
 - MATCH,PROXIES
