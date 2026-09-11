@@ -11,33 +11,17 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: s8LbJCgUiGXeCKVc63tHJP
   udp: true
-- name: 🇰🇿 KZ 02 - xiaohe
-  type: vless
-  server: 194.59.5.46
-  port: 2096
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wild-sky-f384.alvlirm3737.workers.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: wild-sky-f384.alvlirm3737.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇿 KZ 01 - xiaohe
-  - 🇰🇿 KZ 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇰🇿 KZ 01 - xiaohe
-  - 🇰🇿 KZ 02 - xiaohe
 rules:
 - MATCH,PROXIES
