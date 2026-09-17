@@ -5,20 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
-  type: vless
-  server: 104.16.60.10
-  port: 443
-  uuid: cdf5205e-897f-46a7-8d7f-21a61a80b466
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: hk1.69lover.my
-  network: ws
-  ws-opts:
-    path: /api/v2/e2fe4e52a165854d/stream
-    headers:
-      Host: hk1.69lover.my
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
   type: vmess
   server: 156.245.232.239
   port: 35043
@@ -33,7 +19,7 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
   type: vmess
   server: 47.83.19.148
   port: 443
@@ -49,6 +35,20 @@ proxies:
     path: /ws-vmess
     headers:
       Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
+  type: vless
+  server: 104.16.60.10
+  port: 443
+  uuid: cdf5205e-897f-46a7-8d7f-21a61a80b466
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hk1.69lover.my
+  network: ws
+  ws-opts:
+    path: /api/v2/e2fe4e52a165854d/stream
+    headers:
+      Host: hk1.69lover.my
 proxy-groups:
 - name: PROXIES
   type: select

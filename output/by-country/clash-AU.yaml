@@ -6,20 +6,6 @@ log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
   type: vless
-  server: 188.130.207.30
-  port: 2053
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  type: vless
   server: 103.75.119.126
   port: 2087
   uuid: 731f177e-00aa-480c-b935-661456139a32
@@ -37,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
 rules:
 - MATCH,PROXIES
