@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇾 MY 01 - xiaohe
+  type: vless
+  server: 140.245.38.33
+  port: 2096
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /class/season
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇲🇾 MY 02 - xiaohe
   type: vmess
   server: 47.250.135.244
   port: 10000
@@ -20,11 +34,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇲🇾 MY 01 - xiaohe
+  - 🇲🇾 MY 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇲🇾 MY 01 - xiaohe
+  - 🇲🇾 MY 02 - xiaohe
 rules:
 - MATCH,PROXIES
